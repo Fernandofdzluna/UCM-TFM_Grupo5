@@ -19,7 +19,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scan Properties")
 	float Spawndistance;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scan Properties")
-	TMap<int, AScanableObject*> SaveObjectMap;;
+	TArray<AScanableObject*> SaveObject;
 
 	UFUNCTION(BlueprintCallable, Category = "Scan Functions")
 	bool ScanObject(AScanableObject* ActorToScan);

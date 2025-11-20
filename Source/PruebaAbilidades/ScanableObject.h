@@ -14,14 +14,6 @@ class PRUEBAABILIDADES_API AScanableObject : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AScanableObject();
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Indice")
-	int index;
-
-	UFUNCTION(BlueprintCallable, Category = "Indice")
-	int GetIndex() const { return index; }
-
-	UFUNCTION(BlueprintCallable, Category = "Indice")
-	void SetIndex(int NewIndex) { index = NewIndex; }
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
