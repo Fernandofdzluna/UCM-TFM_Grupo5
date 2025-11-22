@@ -11,9 +11,14 @@ class PRUEBAABILIDADES_API AScanableObject : public AActor
 {
 	GENERATED_BODY()
 	
+	
 public:	
 	// Sets default values for this actor's properties
 	AScanableObject();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scan Properties")
+	FString ScanName;
+	UFUNCTION(BlueprintCallable, Category = "Scan Properties")
+	const FString& GetScanName() const { return ScanName; }
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

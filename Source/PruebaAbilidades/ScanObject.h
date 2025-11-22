@@ -20,6 +20,8 @@ public:
 	float Spawndistance;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scan Properties")
 	TArray<AScanableObject*> SaveObject;
+	UFUNCTION(BlueprintCallable, Category="Scan")
+	const TArray<AScanableObject*>& GetSaveObject() const { return SaveObject; }
 
 	UFUNCTION(BlueprintCallable, Category = "Scan Functions")
 	bool ScanObject(AScanableObject* ActorToScan);
